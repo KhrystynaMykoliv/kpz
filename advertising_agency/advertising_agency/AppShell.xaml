@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="advertising_agency.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:advertising_agency"
+    Shell.FlyoutBehavior="Disabled"
+    Title="advertising_agency">
+
+    <FlyoutItem Title="Кампанії">
+        <ShellContent Title="Кампанії" ContentTemplate="{DataTemplate local:Views.AdCampaignPage}" Route="AdCampaignPage" />
+    </FlyoutItem>
+</Shell>

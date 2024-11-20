@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "MRt8g19NAWwifqo4qP+q2whyvJXX3BoDYJj589RPkJI=",
+  "Source": "AdvertisingAgencyApi",
+  "BasePath": "_content/AdvertisingAgencyApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

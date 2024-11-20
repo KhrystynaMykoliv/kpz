@@ -1,0 +1,270 @@
+/* General container styling */
+#root {
+  max-width: 1580px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  color: #FFFFFF; /* Text color for dark theme */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header styling */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+/* Labels */
+label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #222;
+  color: #FFFFFF;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus {
+  outline: none;
+  border-color: #888; /* Highlighted border on focus */
+  box-shadow: 0 0 5px rgba(136, 136, 136, 0.5);
+}
+
+/* Form layout */
+.form-control {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-flex .form-control {
+  width: 49%;
+}
+
+/* Submit button */
+button[type="submit"] {
+  background-color: #000;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #333;
+}
+
+/* Flash message */
+.flash {
+  background: #004600;
+  color: #abffab;
+  padding: 15px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  opacity: 0;
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  z-index: 99;
+}
+
+.flash.active {
+  animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+/* Modal Window styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-main {
+  background-color: #333;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  color: #FFFFFF;
+}
+
+.modal-header {
+  margin-bottom: 1rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #CCCCCC;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  color: #FFFFFF;
+}
+
+thead th {
+  background-color: #444;
+  color: #FFFFFF;
+  padding: 1rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+tbody td {
+  padding: 0.75rem;
+  border-top: 1px solid #555;
+  background-color: #222;
+}
+
+tr:hover td {
+  background-color: #333;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.actions .button-blue {
+  background-color: #4444ff;
+  color: #fff;
+}
+
+.actions .button-red {
+  background-color: #ff4444;
+  color: #fff;
+}
+
+.actions button.edit:hover {
+  background-color: #3333cc;
+}
+
+.actions button.delete:hover {
+  background-color: #cc3333;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+}
+
+/* Main Title (h1) */
+header h1 {
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Navigation Links */
+header nav {
+  display: flex;
+  list-style-type: none;
+  gap: 1.5rem;
+}
+
+header a {
+  color: #c7cedc;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header a:hover {
+  color: #fff;
+}
+
+header a.active {
+  color: #cbd3e3;
+  border-bottom: 2px solid #a8dfff;
+  padding-bottom: 0.25rem;
+}

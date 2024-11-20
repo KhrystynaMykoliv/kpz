@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="advertising_agency.Controls.NewAddCampaignFormControl">
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10" Padding="15" MaximumWidthRequest="1400">
+        <VerticalStackLayout IsVisible="false">
+            <Label Text="ID" FontSize="Medium" IsEnabled="False" />
+            <Entry Text="{Binding AdCampaign.Id, Mode=TwoWay}" FontSize="Medium" IsEnabled="False" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Campaign Name" FontSize="Medium" Margin="0,5,0,0" />
+            <Entry Text="{Binding AdCampaign.Name, Mode=TwoWay}" FontSize="Medium" Placeholder="Enter campaign name" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Target Audience" FontSize="Medium" Margin="0,5,0,0" />
+            <Entry Text="{Binding AdCampaign.TargetAudience, Mode=TwoWay}" FontSize="Medium" Placeholder="Enter target audience" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Start Date" FontSize="Medium" Margin="0,5,0,0" />
+            <DatePicker Date="{Binding AdCampaign.StartDate, StringFormat='{}{0:dd/MM/yyyy}'}" FontSize="Medium" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="End Date" FontSize="Medium" Margin="0,5,0,0" />
+            <DatePicker Date="{Binding AdCampaign.EndDate, StringFormat='{}{0:dd/MM/yyyy}'}" FontSize="Medium" />
+        </VerticalStackLayout>
+      
+        <VerticalStackLayout>
+            <Label Text="Budget" FontSize="Medium" Margin="0,5,0,0" />
+            <Entry Text="{Binding AdCampaign.Budget, Mode=TwoWay}" FontSize="Medium" Keyboard="Numeric" Placeholder="Enter budget amount" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Spent Amount" FontSize="Medium" Margin="0,5,0,0" />
+            <Entry Text="{Binding AdCampaign.SpentAmount, Mode=TwoWay}" FontSize="Medium" Keyboard="Numeric" Placeholder="Enter amount spent" />
+        </VerticalStackLayout>
+    </StackLayout>
+</ContentView>

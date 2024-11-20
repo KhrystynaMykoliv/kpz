@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="advertising_agency.Views.AdCampaignPage"
+             xmlns:controls="clr-namespace:advertising_agency.Controls"
+             xmlns:models="clr-namespace:advertising_agency.Models"
+             xmlns:local="clr-namespace:advertising_agency.ViewModels"
+             xmlns:views="clr-namespace:advertising_agency.Views"
+             Title="Ad Campaigns"
+             BackgroundColor="Black">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding OnAddAdCampaignCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <Grid Padding="20" RowSpacing="0" ColumnSpacing="20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Grid.Column="0" Padding="10" BackgroundColor="Gray">
+            <Grid Padding="5" BackgroundColor="LightGray" RowSpacing="5" ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="150" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Text="Name" FontAttributes="Bold" FontSize="Medium" TextColor="Black" />
+                <Label Grid.Column="1" Text="Target Audience" FontAttributes="Bold" FontSize="Medium" TextColor="Black" />
+                <Label Grid.Column="2" Text="Start Date" FontAttributes="Bold" FontSize="Medium" TextColor="Black" />
+                <Label Grid.Column="3" Text="End Date" FontAttributes="Bold" FontSize="Medium" TextColor="Black" />
+                <Label Grid.Column="4" Text="Budget" FontAttributes="Bold" FontSize="Medium" TextColor="Black" />
+                <Label Grid.Column="5" Text="Spent Amount" FontAttributes="Bold" FontSize="Medium" TextColor="Black" />
+            </Grid>
+
+            <RefreshView Command="{Binding loadAdCampaignCommand}" IsRefreshing="{Binding IsBusy}">
+              <CollectionView ItemsSource="{Binding AdCampaignList}">
+                  <CollectionView.ItemTemplate>
+                      <DataTemplate x:DataType="models:AdCampaign">
+                          <Frame BorderColor="Black" CornerRadius="10" Padding="10" HasShadow="True" BackgroundColor="LightGray"> <!-- Rounded corners for better aesthetics -->
+                              <Grid Padding="5" BackgroundColor="#FFC8C8C8" RowSpacing="5" ColumnSpacing="10">
+                                  <Grid.RowDefinitions>
+                                      <RowDefinition Height="50" />
+                                  </Grid.RowDefinitions>
+                                  <Grid.ColumnDefinitions>
+                                      <ColumnDefinition Width="200" />
+                                      <ColumnDefinition Width="200" />
+                                      <ColumnDefinition Width="150" />
+                                      <ColumnDefinition Width="150" />
+                                      <ColumnDefinition Width="150" />
+                                      <ColumnDefinition Width="150" />
+                                  </Grid.ColumnDefinitions>
+
+                                  <Label Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold" FontSize="Medium" TextColor="DarkBlue" />
+                                  <Label Grid.Column="1" Text="{Binding TargetAudience}" FontSize="Medium" TextColor="Black" />
+                                  <Label Grid.Column="2" Text="{Binding StartDate, StringFormat='{0:MM/dd/yyyy}'}" FontSize="Medium" TextColor="Black" />
+                                  <Label Grid.Column="3" Text="{Binding EndDate, StringFormat='{0:MM/dd/yyyy}'}" FontSize="Medium" TextColor="Black" />
+                                  <Label Grid.Column="4" Text="{Binding Budget, StringFormat='{}{0:C}'}" FontSize="Medium" TextColor="Black" />
+                                  <Label Grid.Column="5" Text="{Binding SpentAmount, StringFormat='{}{0:C}'}" FontSize="Medium" TextColor="Black" />
+                              </Grid>
+                          </Frame>
+                      </DataTemplate>
+                  </CollectionView.ItemTemplate>
+              </CollectionView>
+            </RefreshView>
+        </StackLayout>
+
+        <StackLayout Grid.Column="1" Padding="20" Spacing="15" BackgroundColor="LightGray">
+            <controls:NewAddCampaignFormControl />
+            <HorizontalStackLayout Spacing="20" Padding="10" HorizontalOptions="Center">
+                <Button Text="Submit"
+                        Command="{Binding OnSubmitCommand}"
+                        BackgroundColor="#FF178217"
+                        TextColor="White"
+                        Clicked="OnSubmitButtonClicked" />
+            </HorizontalStackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

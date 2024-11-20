@@ -1,0 +1,66 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property.TargetFramework = net8.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = advertising_agency
+build_property.ProjectDir = /Users/bogdanhrustalov_1/Documents/advertising_agency/advertising_agency/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[/Users/bogdanhrustalov_1/Documents/advertising_agency/advertising_agency/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = advertising_agency.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[/Users/bogdanhrustalov_1/Documents/advertising_agency/advertising_agency/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = advertising_agency.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[/Users/bogdanhrustalov_1/Documents/advertising_agency/advertising_agency/Control/NewAdCampaignFormControl.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = advertising_agency.Control.NewAdCampaignFormControl.xaml
+build_metadata.AdditionalFiles.TargetPath = Control/NewAdCampaignFormControl.xaml
+build_metadata.AdditionalFiles.RelativePath = Control/NewAdCampaignFormControl.xaml
+
+[/Users/bogdanhrustalov_1/Documents/advertising_agency/advertising_agency/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = advertising_agency.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[/Users/bogdanhrustalov_1/Documents/advertising_agency/advertising_agency/Pages/AdCampaignPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = advertising_agency.Pages.AdCampaignPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/AdCampaignPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/AdCampaignPage.xaml
+
+[/Users/bogdanhrustalov_1/Documents/advertising_agency/advertising_agency/Pages/AddAdCampaignPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = advertising_agency.Pages.AddAdCampaignPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/AddAdCampaignPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/AddAdCampaignPage.xaml
+
+[/Users/bogdanhrustalov_1/Documents/advertising_agency/advertising_agency/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = advertising_agency.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+
+[/Users/bogdanhrustalov_1/Documents/advertising_agency/advertising_agency/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = advertising_agency.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml

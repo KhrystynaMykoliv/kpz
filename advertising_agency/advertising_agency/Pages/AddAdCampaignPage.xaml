@@ -1,0 +1,13 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:advertising_agency.Controls"
+             x:Class="advertising_agency.Views.AddAdCampaignPage"
+             Title="New Ad Campaign">
+    <StackLayout Grid.Column="0" Padding="10">
+        <controls:NewAddCampaignFormControl />
+        <HorizontalStackLayout Spacing="20" Padding="10" HorizontalOptions="Center">
+            <Button Text="Submit" Command="{Binding OnSubmitCommand}" BackgroundColor="#FF178217" TextColor="White" />
+            <Button Text="Cancel" Command="{Binding OnCancelCommand}" BackgroundColor="LightCoral" TextColor="White" />
+        </HorizontalStackLayout>
+    </StackLayout>
+</ContentPage>
